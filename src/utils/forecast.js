@@ -17,7 +17,7 @@ const forecast = ({latitude,longitude},callback) => {
                 location: response.body.location.name,
                 description: response.body.current.weather_descriptions,
                 temperature: response.body.current.temperature,
-                preception: response.body.current.precip,
+                humidity: response.body.current.humidity,
                 feeling: response.body.current.feelslike
             }
             // console.log('\n'+response.body.current.weather_descriptions+'\nAt ' + response.body.location.name + 'the temperature is ' + response.body.current.temperature + 'C. And haves '

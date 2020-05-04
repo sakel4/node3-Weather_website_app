@@ -56,6 +56,7 @@ app.get('/weather',(req,res)=>{//get forecast data based on address(like wether 
                             error: 'Error: '+forecastError
                         })
                     }else{//display the data
+                        console.log(forecastData)
                         res.send({
                             address: req.query.address,
                             location: data.location,
@@ -63,8 +64,8 @@ app.get('/weather',(req,res)=>{//get forecast data based on address(like wether 
                             longitude: data.longitude,
                             description: forecastData.address,
                             temperature: forecastData.temperature,
-                            preception: forecastData.preception,
-                            feeling: forecastData.feeling
+                            feeling: forecastData.feeling,
+                            humidity: forecastData.humidity,
                         })
                     }
                 })

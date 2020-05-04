@@ -20,7 +20,7 @@ function getWeatherData(location) {
             view1.textContent = ''
         }else{
             view1.textContent = "Location: " + data.location + '.'
-            view2.textContent = "Temperature: " + data.temperature +'C. With ' + data.feeling +'C feeling. And ' + data.preception +'% chance to rain.'
+            view2.textContent = "Temperature: " + data.temperature +'C. With ' + data.feeling +'C feeling. And ' + data.humidity +'% humidity.'
         }
         
     })
