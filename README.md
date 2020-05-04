@@ -1,7 +1,7 @@
 # node3-Weather_website_app
 
 This app is a personal project to learn about nodejs.
-I use api.mapbox.com to determine the location of the user and
+I use api.mapbox.com to determine the location of the given location and
 weatherstack.com api to take and display the weather forecast.
 
 Feel free to use it!
