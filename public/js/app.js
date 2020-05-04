@@ -11,7 +11,7 @@ weatherForm.addEventListener('submit',(e)=>{
 })
 
 function getWeatherData(location) {
-    fetch('http://localhost:3000/weather?address='+location).then((response)=>{
+    fetch('/weather?address='+location).then((response)=>{
     response.json().then((data)=>{//getting data from response with json format
         if(data.error){
             view2.textContent = data.error

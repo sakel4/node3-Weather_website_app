@@ -7,7 +7,8 @@ const forecast = require('./utils/forecast.js')
 //#endregion
 
 //generate express app
-const app = express()
+const app = express();
+const port = process.env.PORT || 3000
 
 //#region Paths
 //define paths
@@ -128,6 +129,6 @@ app.get('*',(req,res)=>{
 })
 //#endregion
 
-app.listen(3000,()=>{
-    console.log('Server is up on port 3000. Visit http://localhost:3000')
+app.listen(port,()=>{
+    console.log('Server is up on port '+port)
 })
