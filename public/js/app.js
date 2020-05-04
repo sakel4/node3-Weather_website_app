@@ -11,6 +11,8 @@ weatherForm.addEventListener('submit',(e)=>{
 })
 
 function getWeatherData(location) {
+    view1.textContent = 'Loading...'
+    view2.textContent = ''
     fetch('/weather?address='+location).then((response)=>{
     response.json().then((data)=>{//getting data from response with json format
         if(data.error){
@@ -18,7 +20,7 @@ function getWeatherData(location) {
             view1.textContent = ''
         }else{
             view1.textContent = "Location: " + data.location + '.'
-            view2.textContent = "Temperature: " + data.temperature +'C.'
+            view2.textContent = "Temperature: " + data.temperature +'C. With ' + data.feeling +'C feeling. And ' + data.preception +'% chance to rain.'
         }
         
     })
